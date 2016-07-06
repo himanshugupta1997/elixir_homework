@@ -1,0 +1,343 @@
+
+
+*
+{
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+}
+
+a:link
+{
+  color: grey;
+}
+
+a:visited
+{
+  color: grey;
+
+}
+
+a:hover
+{
+  color: grey;
+}
+
+
+body
+{
+  margin-left: 90px;
+  margin-right: 100px;
+}
+
+.global
+{
+  background-image: url("body-bg.png");
+  width: 100%;
+  margin-right: 0px;
+  padding: 10px;
+  height: 100%;
+}
+
+.top
+{
+  width: 86%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 1);
+  padding : 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+   position: fixed;
+}
+
+.Top_button
+{
+  font-family: comic;
+  color: grey;
+  font-size: 1.5em;
+  margin-left: 20px;
+  margin-right: 0px;
+  margin-top: 30px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis:
+}
+
+#blank
+{
+  width: 200px;
+
+}
+
+#logo
+{
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+
+#About
+{
+  margin-left: 25px;
+  color: darkgrey;
+  font-size: 5em;
+  font-family: georgia,serif;
+  display: inline-block;
+}
+.Title_about
+{
+  display: inline-flex;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#About_button_blank
+{
+  width: 700px;
+}
+
+.About_button
+{
+  margin-left: 20px;
+  margin-right: 0px;
+  display: inline-block;
+  margin-top: 30px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.Line1
+{
+  background-image: url(divider.png);
+  height: 10px;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.About_main
+{
+  padding : 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.About_main_inside
+{
+  font-family: comic;
+  word-wrap: normal;
+  color: grey;
+  font-size: 1em;
+  margin-left: 20px;
+  margin-right: 0px;
+  margin-top: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+
+}
+#About_text_heading
+{
+  font-size: 2em;
+
+}
+
+#Icon
+{
+  margin-left: 26px;
+  margin-right: 26px;
+  width: 150px;
+
+}
+
+#Experienceheading
+{
+margin-left: 25px;
+  color: darkgrey;
+  font-size: 5em;
+  font-family: georgia,serif;
+}
+#Workheading
+{
+margin-left: 25px;
+  color: darkgrey;
+  font-size: 5em;
+  font-family: georgia,serif;
+}
+
+#Connectheading
+{
+margin-left: 25px;
+  color: darkgrey;
+  font-size: 5em;
+  font-family: georgia,serif;
+}
+
+.Experience
+{
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+.Experience_inside
+{
+  font-family: comic;
+  word-wrap: normal;
+  color: grey;
+  font-size: 1em;
+  margin-left: 40px;
+  margin-right:20px;
+  margin-top: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+}
+#Des
+{
+  font-size: 2em;
+  color: grey;
+  font-family: comic;
+}
+
+#name
+{
+  background-image: url(icon-user.png);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#e-mail
+{
+  background-image: url(icon-mail.png);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#message
+{
+  background-image: url(icon-message.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+
+}
+
+.Work
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Work_image
+{
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 20%;
+  margin-right:px;
+  margin-top: 20px;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+}
+
+.Work_image img
+{
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 260px;
+}
+
+.Connect
+{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 40px;
+
+}
+
+.Connectform
+{
+  margin-left: 10px;
+  width: 50%;
+  margin-top: 20px;
+  color: grey;
+  font-size: 2em;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+}
+
+
+
+.Connectform input[type="text"]
+{
+  width: 50%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);;
+
+
+}
+
+.Connectform textarea
+{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Connectform input[type="Submit"]
+{
+  background-color: black;
+  color: white;
+}
+
+.follow
+{
+
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-left: 10px;
+  margin-right: 20px;
+
+}
+
+.Follow_me
+{
+  font-size: 2em;
+  color: grey;
+
+}
+.follow_blank
+{
+  width: 600px;
+  height: 100px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.follow_text
+{
+  font-size: 1em;
+  color: grey;
+
+}
+
+.follow_text img
+{
+  display: inline-block;
+  margin-left: 60px;
+}
+
+#facebook
+{
+  margin-left: 0px;
+}
+
+#send
+{
+  height: 40px;
+  width: 40px;
+  font-size: 0.4em;
+  background-color: transparent;
+  color: white;
+}
