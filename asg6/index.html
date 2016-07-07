@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <link rel="stylesheet" href="calc.css" media="screen" title="no title" charset="utf-8">
+  <body>
+
+    <h1 align="Center">CALCULATOR</h1>
+    <br><br>
+    <div id="result_screen">
+   </div>
+   <div id="show_screen"></div>
+    <div class="calcul">
+    <button type="button" name="1" class="B" id="1" onclick="setnumber(1)">1</button>
+    <button type="button" name="2" class="B" id="2" onclick="setnumber(2)">2</button>
+    <button type="button" name="3" class="B" id="3" onclick="setnumber(3)">3</button>
+    <button type="button" name="plus" class="B" id="plus" onclick="getop('+')" >+</button>
+    <br>
+    <button type="button" name="4" class="B" id="4" onclick="setnumber(4)">4</button>
+    <button type="button" name="5" class="B" id="5" onclick="setnumber(5)">5</button>
+    <button type="button" name="6" class="B" id="6" onclick="setnumber(6)">6</button>
+    <button type="button" name="minus" class="B" id="minus" onclick="getop('-')" >-</button>
+    <br>
+    <button type="button" name="7" class="B" id="7" onclick="setnumber(7)">7</button>
+    <button type="button" name="8" class="B" id="8" onclick="setnumber(8)">8</button>
+    <button type="button" name="9" class="B" id="9" onclick="setnumber(9)">9</button>
+    <button type="button" name="multiply" class="B" id="multiply" onclick="getop('x')">x</button>
+    <br>
+    <button type="button" name="0" class="B" id="0" onclick="setnumber(0)">0</button>
+    <button type="button" name="decimal" class="B" id="decimal" onclick="decimal()" >.</button>
+     <button type="button" name="C" class="B" id="c" onclick="cl()">Clear</button>
+
+
+
+    <button type="button" name="divide" class="B" id="divide" onclick="getop('/')">/</button>
+    <br>
+
+      <button type="button" name="modulus" class="B" id="modulus" onclick="getop('%')">%(Modulus)</button>
+        <button type="button" name="equal" class="B" id="equal" onclick="result()">=</button>
+
+    <button type="button" name="power" class="B" id="power" onclick="getop('^')">^</button>
+    <br>
+
+  </div>
+     <script src="calc.js">
+
+    </script>
+  </body>
+
+</html>
