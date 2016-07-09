@@ -1,0 +1,151 @@
+body
+{
+	background-color: aqua;
+}
+
+*
+{
+    margin: 10px;
+    padding: 10px;
+
+}
+
+
+
+h1
+{
+    font-size: 5em;
+    color: red;
+    text-align: center;
+    margin: 0px;
+    margin-top: 0px;
+
+}
+
+.Caption
+{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 2em;
+    color: darkgray;
+    margin: 0px;
+}
+
+.Work
+{
+    margin-left: 200px;
+    width: 800px;
+    height: 38px;
+    font-size: 1.5em;
+	border-color: coral;
+	background-color: lightpink;
+	color: darkorchid;
+
+}
+
+#WorkButton
+{
+    height: 50px;
+    width: 100px;
+    background-color: black;
+    color: darkgrey;
+    font-size: 1.2em;
+    margin-top: -10px;
+    border-color: grey;
+    box-shadow: 4px 4px grey;
+
+}
+
+#WorkButton:hover
+{
+  height: 55px;
+  width: 105px;
+}
+
+#WorkButton:active
+{
+  height: 55px;
+  width: 105px;
+  box-shadow: 0px 0px grey;
+}
+p
+{
+  font-size: 2em;
+  text-align: center;
+  color: green;
+  font-weight: 900;
+
+}
+#mylist
+{
+  color: darkblue;
+  font-family: cursive;
+  font-size: 1.5em;
+}
+
+input:checked
+{
+	height: 20px;
+	width: 20px;
+}
+
+#C
+{
+	height: 50px;
+    width: 100px;
+    background-color: black;
+    color: darkgrey;
+    font-size: 1.2em;
+    margin-top: -10px;
+    border-color: grey;
+    box-shadow: 4px 4px grey;
+	margin-left: 1000px;
+
+	
+}
+
+
+
+#C:hover
+{
+	height: 55px;
+  width: 105px;
+}
+
+#C:active
+{
+	height: 55px;
+  width: 105px;
+  box-shadow: 0px 0px grey;
+	
+}
+#D
+{
+	height: 50px;
+    width: 100px;
+    background-color: black;
+    color: darkgrey;
+    font-size: 1.2em;
+    margin-top: -10px;
+    border-color: grey;
+    box-shadow: 4px 4px grey;
+
+	
+}
+
+#D:hover
+{
+	height: 55px;
+  width: 105px;
+}
+
+#D:active
+{
+  height: 55px;
+  width: 105px;
+  box-shadow: 0px 0px grey;
+	
+}
+
+
+
