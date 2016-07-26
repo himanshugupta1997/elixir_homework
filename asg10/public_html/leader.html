@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    body
+    {
+        background-color: aqua;
+    }
+
+    #heading
+    {
+        font-size: 4.7em;
+        color: red;
+        text-align: center;
+
+    }
+
+    #heading2
+    {
+        font-size: 3.9em;
+        color: darkgreen;
+        text-align: center;
+    }
+    #box1
+    {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-color: turquoise;
+    }
+    #user
+    {
+        margin: 20px;
+        background-color: lightgreen;
+        color: red;
+        flex-grow: 1;
+        flex-shrink: 1;
+        font-size: 2em;
+    }
+
+
+    #score
+    {
+        margin: 20px;
+        background-color: lightgreen;
+        color: red;
+        flex-grow: 1;
+        flex-shrink: 1;
+        font-size: 2em;
+    }
+
+</style>
+<body>
+<h1 id="heading" >Pokemon Game</h1>
+
+<h2 id="heading2">SCORES</h2>
+
+<div id="box1">
+    <div id="user">
+
+
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <div id="score">
+
+
+    </div>
+
+
+
+</div>
+
+<a href="logged.html" id="link1">Select Level Page</a>
+
+<a href="index.html" id="link2">Home Page</a>
+
+<script src="jquery.js">
+
+</script>
+
+<script>
+
+    $(function () {
+
+        $.get('/fetch_score',function (data, status) {
+
+            var temp1 = $('#user');
+            var temp2 = $('#score');
+            console.log("fetch scores in browser");
+            console.log(data);
+            temp1.append("USERNAME  <br>");
+            temp2.append("SCORE <br>");
+            for(var i = 0; i<data.length; i++)
+            {
+                console.log("data is " + data[i].username + ' ' + data[i].score);
+                temp1.append('' + data[i].username + '<br>');
+                temp2.append('' + data[i].score + '<br>');
+            }
+
+        });
+
+
+        $('#link1').click(function () {
+
+            var l = localStorage.getItem('level');
+            l = Number(l);
+            l++;
+            localStorage.setItem('level',l);
+
+
+
+        });
+        $('#link2').click(function () {
+            localStorage.clear();
+
+        });
+
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

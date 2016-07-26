@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <style>
+        body
+        {
+            background-color: darkturquoise;
+        }
+        
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            margin-left: 15px;
+        }
+        
+    #heading
+    {
+        font-size: 4.7em;
+        color: red;
+
+    }
+
+    #heading2
+    {
+        font-size: 3.9em;
+        color: darkgreen;
+    }
+        #form
+        {
+         /*   height: 300px;
+       /* margin-top: 150px;*/
+        width: 400px;
+            padding: 10px;
+        background-color: bisque;
+        margin-left: 10px;
+        margin-right: 100px;
+        box-shadow: 3px 3px 3px black;
+        border: 1px grey;
+            font-size: 2em;
+            color: blue;
+        }
+        .i
+        {
+            height: 35px;
+        width: 300px;
+        /*margin: 50px;*/
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom:5px;
+
+        font-size:1em;
+        border: 4px solid black;
+        color: blue;
+        }
+        #submit
+        {
+        margin-left: 10px;
+        width: 140px;
+        height: 50px;
+        font-size: 1em;
+        background-color: aqua;
+        color: lightsalmon;
+        border: 1px darkblue;
+        box-shadow: 3px 3px 3px grey;
+            margin-bottom: 10px;
+        }
+        #pp
+        {
+            display: flex;
+        }
+    
+    
+    </style>
+<body>
+    <h1 id="heading" >Pokemon</h1>
+    <br>
+    <h2 id="heading2" >New User Form</h2>
+    <br>
+    <div id="pp">
+    <div id="form">
+        
+    <p id="caption"> Fill the following form to create a new user.</p>
+    <input type="text" id="firstname" class="i" name="FirstName" placeholder="First Name" required>
+    <br>
+    <input type="text" class="i" name="LastName" placeholder="Last Name">
+    <br>
+    <input type="text" class="i" name="User" placeholder="Username" id="username">
+        <br>
+    <input type="number" class="i" name="age" placeholder="Age" required>
+
+            <br>
+   
+   
+   
+    <input type="submit" value="Create" id="submit" name="submit">
+   
+    </div>
+    <div id="Second">
+    <img src="assets/ball.png">
+        
+        <img src="assets/blissey.png">
+        <br>
+        
+</div>
+    </div>
+
+
+<script src="jquery.js">
+
+</script>
+
+<script >
+
+    function send() {
+        console.log("Send function ");
+
+        var obj = {username : $('#username').val()};
+
+        $.get('/newuser',obj,function (data, status) {
+
+            if(data.val == 0)
+            {
+                alert("such an username already exists. Please enter another one");
+
+            }
+            else
+            {
+
+                localStorage.setItem('level',0);
+                localStorage.setItem('username',obj.username);
+                window.location.href = "logged.html";
+            }
+
+        });
+
+    }
+
+    $(function () {
+        localStorage.clear();
+        $('#submit').click(function () {
+            if($('#firstname').val() == "" || $('#firstname').val() == null )
+        {
+            alert("Please fill the first name");
+            window.location = "";
+        }
+        else if( $('#username').val() == "" || $('#username').val() == null)
+            {
+                alert("Please fill the username");
+                window.location = "";
+            }
+        else
+            {
+                send();
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

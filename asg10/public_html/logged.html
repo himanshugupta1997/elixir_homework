@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>Logged in</title>
+    
+    </head>
+    <style>
+         body
+        {
+            background-color: aqua;
+        }
+        
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            margin-left: 15px;
+        }
+        
+    #heading
+    {
+        font-size: 4.7em;
+        color: red;
+
+    }
+
+    #heading2
+    {
+        font-size: 3.9em;
+        color: darkgreen;
+    }
+        #Level_Box
+        {
+            width: 380px;
+            padding: 10px;
+        background-color: lightgray;
+        margin-left: 10px;
+        margin-right: 100px;
+        box-shadow: 3px 3px 3px black;
+        border: 1px grey;
+            font-size: 2em;
+            color: blue;
+        }
+        
+        
+  .LL
+        {
+            width: 140px;
+        height: 50px;
+        font-size: 1em;
+        background-color: lightpink;
+        color: darkred;
+        border: 1px darkblue;
+        box-shadow: 3px 3px 3px grey; 
+            margin: 10px;
+
+        }
+        #first
+        {
+            display: flex;
+        }
+
+    
+    </style>
+    
+    <body>
+        
+        <h1 id="heading">Pokemon Game</h1>
+        
+        <h2 id="heading2">Congrats! You are now logged in</h2>
+        <br><br><br>
+        <div id="first">
+        
+        <div id="Level_Box">
+            <p id="para">
+            Select a level to play. Complete levels to unlock harder ones.
+            </p>
+            <br>
+        
+            
+            <button type="button" name="Level1" class="LL" id="1">Level1</button>
+            <button type="button" class="LL" name="Level2" id="2">Level2</button>
+            <button type="button" name="Level3" class="LL" id="3">Level3</button>
+            <button type="button" name="Level4" class="LL" id="4">Level4</button>
+            <button type="button" name="Level5" class="LL" id="5">Level5</button>
+            <button type="button" name="Level6" class="LL" id="6">Level6</button>
+        
+        
+        </div>
+        <div id="second">
+        <img src="assets/jirachi.png">
+            <img src="assets/aipom.png">
+        
+        </div>
+        </div>
+    
+
+    <script src="jquery.js">
+
+
+    </script>
+
+    <script>
+
+        function StartGame(level) {
+
+            localStorage.setItem('level',Number(level));
+            window.location.href = "canvas.html";
+        }
+
+        $(function () {
+
+            var level = localStorage.getItem('level');
+            if (level == null)
+            {
+                window.alert("Not authenticated Please login using your username");
+                window.location.href = "Page1.html";
+            }
+            else
+            {
+                level = Number(level);
+                var i;
+                if(level==0)
+                {
+                    i = 2;
+                }
+                else
+                {
+                    i = level+1;
+                }
+                for( ; i<=6; i++)
+                {
+                    var temp = $('#' + i);
+                    temp.attr('disabled','disabled');
+                    temp.css({'background-color': 'lightcoral', 'color' : 'black', 'box-shadow': '0px 0px 0px', 'border' : '0px'});
+                }
+            }
+
+            $('.LL').click(function () {
+
+
+                StartGame($(this).attr('id'));
+
+
+
+            });
+
+
+        });
+
+
+
+    </script>
+    
+    </body>
+
+
+
+</html>

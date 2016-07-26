@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+
+    body
+    {
+        background-color: darkturquoise;
+    }
+
+    *
+    {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #login_box
+    {
+        height: 300px;
+       /* margin-top: 150px;*/
+        width: 600px;
+        background-color: bisque;
+        margin-left: 100px;
+        margin-right: 100px;
+        box-shadow: 3px 3px 3px black;
+        border: 1px grey;
+
+    }
+
+    #Username
+    {
+        height: 35px;
+        width: 500px;
+        /*margin: 50px;*/
+        margin-left: 50px;
+        margin-top: 50px;
+        margin-bottom: 25px;
+
+        font-size: 2em;
+        border: 4px solid black;
+        color: blue;
+    }
+
+    #h
+    {
+        font-size: 5em;
+        color: red;
+
+    }
+
+    #hh
+    {
+        font-size: 4em;
+        color: darkgreen;
+    }
+
+    #Sign_in
+    {
+        margin-left: 240px;
+        width: 140px;
+        height: 50px;
+        font-size: 2em;
+        background-color: aqua;
+        color: lightsalmon;
+        border: 1px darkblue;
+        box-shadow: 3px 3px 3px grey;
+    }
+
+    p
+    {
+        margin-left: 50px;
+        font-size: 1.6em;
+        color: chocolate;
+    }
+
+    a:link
+    {
+        color: darkblue;
+        text-decoration: none;
+        font-style: italic;
+
+    }
+    a:visited
+    {
+        color: darkred;
+        text-decoration: underline;
+        font-style: italic;
+
+    }
+    #page
+    {
+        display: flex;
+    }
+
+
+
+</style>
+<body>
+<br><br>
+<h1 id="h" align="center">Pokemon Game</h1>
+<br><br>
+<h2 id="hh" align="center">Sign in to continue to the game</h2>
+<br><br><br>
+<div id="page">
+    <div id="d">
+        <img src="assets/ariados.png">
+    </div>
+<div id="login_box">
+
+
+    <input type="text" placeholder="Username" id="Username">
+    <button class="B" id="Sign_in">Sign in</button>
+    <br>
+    <p>
+        <br>
+    Don't have an account. <br> <a href="create.html">Click here</a> to create
+    one.
+    </p>
+    <p id="msg"></p>
+
+
+</div>
+    <div id="d">
+        <img src="assets/charmeleon.png">
+    </div>
+</div>
+
+<script src="jquery.js">
+
+
+</script>
+
+<script>
+
+    function login(username) {
+        console.log("login function called");
+        $.get('/login',{username : username}, function (data,status) {
+
+            if(data.val === -1)
+            {
+                console.log("No such username");
+                $('#msg').append('<p style="color: darkred">' + ' This username does not exist');
+
+            }
+            else
+            {
+                localStorage.setItem('level',data.val);
+                localStorage.setItem('username', username);
+                console.log("Ohh yes! Username found . Just login in");
+                window.location.href = "logged.html";
+            }
+        });
+
+    }
+
+
+    $(function () {
+        localStorage.clear();
+
+        $('.B').click(function () {
+
+            login($('#Username').val());
+        })
+
+    });
+
+
+
+
+</script>
+
+
+</body>
+</html>

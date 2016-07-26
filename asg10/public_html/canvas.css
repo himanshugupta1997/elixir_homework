@@ -1,0 +1,20 @@
+#c
+{
+    position: absolute;
+}
+#mycanvas
+{
+    border: 2px solid blue;
+    background-image: url("assets/water.png");
+    background-size: cover;
+}
+#score
+{
+    height: 50px;
+    width: 150px;
+    margin-left: 552px;
+    position: absolute;
+    color: red;
+    font-size: 2em;
+    background-color: aqua;
+}
