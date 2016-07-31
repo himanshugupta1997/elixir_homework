@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+
+
+<body>
+
+<div class="container-fluid">
+
+    <div class="row ">   <! jumbotron>
+
+        <div class="col-md-4">
+
+            <img src="assets/images%20(1).png" class="img-thumbnail img-responsive">
+
+        </div>
+
+        <div class="col-md-8">
+
+            <h1 class="text-danger" style="font-weight: bolder"> <strong>Coding Blocks Course Form  </strong> </h1>
+
+
+        </div>
+
+
+    </div>
+
+    <br>
+    <div class="row">
+
+        <div class="col-md-8 lead text-info form-group">
+
+            <form method="get" action="#" role="form">
+
+            <label for="Name" class="control-label"> <abbr title="Required" class="text-danger">*</abbr> Name:</label>
+            <br>
+            <input type="text" class="form-control input-lg" title="Name" name="Name" placeholder="Enter name here" id="Name" style="color: orange;" required> <br>
+                <label for="Fathers_Name" class="control-label"> <abbr title="Required" class="text-danger">*</abbr> Father's Name:</label>
+                <br>
+                <input type="text" class="form-control input-lg" title="Fathers_Name" name="Fathers_Name" placeholder="Enter Father's name here" id="Fathers_Name" required style="color: orange;"> <br>
+                <label for="Mothers_Name"  class="control-label">  <abbr title="Required" class="text-danger">*</abbr> Mother's Name:</label>
+                <br>
+                <input type="text" class="form-control input-lg" title="Mothers_Name" name="Mothers_Name" required placeholder="Enter Mother's name here" id="Mothers_Name" style="color: orange;"> <br>
+
+                <label for="College" class="control-label">  <abbr title="Required" class="text-danger">*</abbr> College: </label>
+                <br>
+                <input type="text" class="form-control input-lg" title="College" name="College" placeholder="Enter College name here" id="College" style="color: orange;" autocomplete="" required> <br>
+                <label for="Age" class="control-label">  <abbr title="Required" class="text-danger">*</abbr> Age </label>
+                <br>
+                <input type="number" class="form-control input-lg" title="Age" name="Age" placeholder="Enter Age here" id="Age" style="color: orange;" autocomplete="" required> <br>
+
+
+
+
+                <label for="Mobile" class="control-label">  <abbr title="Required" class="text-danger">*</abbr> Mobile Number </label>
+                <br>
+                <input type="number" class="form-control input-lg" title="Mobile Number" name="Mobile" placeholder="Enter Mobile number here" id="Mobile" style="color: orange;" autocomplete="" required> <br>
+
+
+                <label for="Alt_Mobile" class="control-label"> Alternate Mobile Number </label>
+                <br>
+                <input type="number" class="form-control input-lg" title="Alternate Mobile" name="Alt_Mobile" placeholder="Enter Alternate Mobile number here" id="Alt_Mobile" style="color: orange;" autocomplete="" required> <br>
+
+                <label for="E-mail" class="control-label">  <abbr title="Required" class="text-danger">*</abbr> e-mail </label>
+                <br>
+                <input type="email" class="form-control input-lg" title="e-mail" name="e-mail" placeholder="Enter email here" id="E-mail" style="color: orange;" autocomplete="" required> <br>
+
+
+                <label for="Alt_e-mail" class="control-label"> Alternate e-mail </label>
+                <br>
+                <input type="email" class="form-control input-lg" title="Alternate e-mail" name="Alt_email" placeholder="Enter Alternate e-mail here" id="Alt_e-mail" style="color: orange;" autocomplete="" required> <br>
+                <label for="Course" class="control-label"> <abbr title="Required" class="text-danger">*</abbr>Course Interested:</label>
+                <br>
+                <select class="form-control input-lg"  required id="Course" title="Course">
+                    <option disabled selected>Select</option>
+                     <option> Launchpad</option>
+                    <option>Crux</option>
+                    <option>Pandora</option>
+                    <option>Elixir</option>
+                    <option>Game-development</option>
+                </select>
+                <br>
+
+
+
+                <label for="Submit" class="control-label"> </label>
+                <input type="submit" id="submit" title="submit" name="submit" value="Submit" class="btn-success btn-lg">
+
+
+
+
+            </form>
+
+
+
+        </div>
+
+
+        <div class="col-md-4">
+            <br>
+            <br>
+            <div class="jumbotron">
+
+                <div class="text-danger" style="font-size: 1.5em; font-weight: bold">
+
+                    Click on any course to know about it.
+                    <br><br>
+                </div>
+
+                <button type="button" class="btn-success btn-lg btn-block" data-toggle="collapse" data-target="#demo1">Launchpad</button>
+                <div class="collapse" id="demo1" style="color: darkblue">
+
+                    A foundation course on C++ including data structures and algorithms
+
+                </div>
+                <br>
+                <button type="button" class="btn-success btn-lg btn-block" data-toggle="collapse" data-target="#demo2">Crux</button>
+                <div class="collapse" id="demo2" style="color: darkblue">
+
+                    A foundation course on java including data structures and algorithms and OOPS.
+
+                </div>
+                <br>
+                <button type="button" class="btn-success btn-lg btn-block" data-toggle="collapse" data-target="#demo3">Elixir</button>
+                <div class="collapse" id="demo3" style="color: darkblue">
+
+                    Course for web development on HTML, CSS, JSP and node.js
+
+                </div>
+                <br>
+                <button type="button" class="btn-success btn-lg btn-block" data-toggle="collapse" data-target="#demo4">Pandora</button>
+                <div class="collapse" id="demo4" style="color: darkblue">
+
+                    Andriod app development course.
+
+                </div>
+                <br>
+                <button type="button" class="btn-success btn-lg btn-block" data-toggle="collapse" data-target="#demo5">Game-development</button>
+                <div class="collapse" id="demo5" style="color: darkblue">
+
+                    A course to develop games using javascript.
+
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
