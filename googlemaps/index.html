@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery.js">
+
+    </script>
+
+</head>
+
+<style>
+
+    #super
+    {
+        display: flex;
+    }
+
+    #directions
+    {
+        margin: 50px;
+    }
+
+</style>
+
+<body>
+<div id="super">
+<div style="height: 500px; width: 480px;" id="map">
+</div>
+<div id="directions">
+
+    Source : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select id="source" title="source">
+
+
+        <option value="Coding_Blocks">Coding Blocks</option>
+        <option value="College">College</option>
+
+    </select>
+    <br>
+
+
+    Destination :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select id="destination" title="des">
+
+
+        <option value="Coding_Blocks">Coding Blocks</option>
+        <option value="College">College</option>
+
+
+    </select>
+    <br>
+
+    <button id="get_directions">Get Directions</button>
+
+
+</div>
+    </div>
+<div id="test">
+</div>
+<button id="college">College</button>
+<button id="home">Home</button>
+<button id="Coding-Blocks">Coding-Blocks</button>
+<button id="location">Current_location</button>
+
+
+<div id="panel">
+
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeX1zBVU0egCcG_EChc0gstBaQskdDyQs&callback=initMap"
+        async defer></script>
+<script src="map.js">
+</script>
+
+</body>
+</html>
