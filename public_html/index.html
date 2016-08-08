@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <! This will help in zooming in mobile>
+    <title>Home</title>
+</head>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+
+<style>
+
+    @media screen and (max-width: 768px)
+    {
+        #row1-div1
+        {
+            display: none;
+        }
+        #row1-div3
+        {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 992px)
+    {
+        #top-heading
+        {
+            font-size: 3em;
+        }
+    }
+
+
+
+</style>
+
+<body>
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Cricket</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">About Us </a>
+                </li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container-fluid">
+
+        <div class="row" id="row1" style="margin-top: 10px; margin-bottom: 10px;">
+
+            <div class="col-sm-4" id="row1-div1">
+
+                <img src="assets/logo3.jpg" style="height: 150px" class="img-circle img-responsive" id="top-image1">
+
+            </div>
+
+            <div class="col-sm-4" id="row1-div2">
+
+                <span style="font-weight: bolder; color: red; text-align: center; font-size: 6em; " id="top-heading"> Cricket   </span>
+
+            </div>
+            <div class="col-sm-4" id="row1-div3">
+
+                <img src="assets/logo2" style="height: 150px" class="img-circle img-responsive" id="top-image2">
+
+            </div>
+
+        </div>
+        <div class="row" id="row2" style="margin-top: 10px; background-color: pink">
+            
+            <div class="col-sm-12" id="row2-div1">
+                
+                <p id="caption1" style="text-align: center; font-size: 1.4em; color: darkgreen;">Watch Out All Die Hard Cricket Fans! This is for you.</p>
+                <p id="caption2" style="text-align: center; font-size: 1.4em; color: darkblue;"> <mark>All cricket news, updates and stats at your click.</mark> </p>
+                
+            </div>
+            
+        </div>
+        <div class="row" id="row3" style="margin-top: 10px; background-color: blue; height: 35px; color: chartreuse; text-align: center; font-size: 1.6em; font-weight: 900;">Live Matches</div>
+        <div class="row" id="row4" style="margin-top: 10px; background-color: blue; height: 35px; color: chartreuse; text-align: center; font-size: 1.6em; font-weight: 900;">Upcoming Matches</div>
+        <div class="row" id="row5" style="margin-top: 10px; background-color: blue; height: 35px; color: chartreuse; text-align: center; font-size: 1.6em; font-weight: 900;">Recent Concluded Matches</div>
+        <div class="row" id="row6" style="margin-top: 10px; background-color: blue; height: 35px; color: chartreuse; text-align: center; font-size: 1.6em; font-weight: 900;">News</div>
+        <div class="row" id="row7" style="margin-top: 10px; background-color: blue; height: 35px; color: chartreuse; text-align: center; font-size: 1.6em; font-weight: 900;">Search Stats</div>
+    </div>
+</body>
+</html>
